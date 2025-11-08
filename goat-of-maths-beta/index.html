@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOAT of Maths</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': {
+                'DEFAULT': 'hsl(var(--primary) / <alpha-value>)',
+                'hover': 'hsl(var(--primary-hover) / <alpha-value>)',
+                'light': 'hsl(var(--primary-light) / <alpha-value>)',
+              },
+              'background': {
+                'light': 'hsl(var(--background-light) / <alpha-value>)',
+                'dark': 'hsl(var(--background-dark) / <alpha-value>)',
+              },
+              'card': {
+                'light': 'hsl(var(--card-light) / <alpha-value>)',
+                'dark': 'hsl(var(--card-dark) / <alpha-value>)',
+              },
+              'header': {
+                  'light': 'hsl(var(--header-light) / <alpha-value>)',
+                  'dark': 'hsl(var(--header-dark) / <alpha-value>)'
+              },
+              'text': {
+                'light': 'hsl(var(--text-light) / <alpha-value>)',
+                'dark': 'hsl(var(--text-dark) / <alpha-value>)',
+                'muted': {
+                    'light': 'hsl(var(--text-muted-light) / <alpha-value>)',
+                    'dark': 'hsl(var(--text-muted-dark) / <alpha-value>)'
+                }
+              },
+              'border': {
+                'light': 'hsl(var(--border-light) / <alpha-value>)',
+                'dark': 'hsl(var(--border-dark) / <alpha-value>)',
+              },
+              'badge': {
+                'light': 'hsl(var(--badge-light) / <alpha-value>)',
+                'dark': 'hsl(var(--badge-dark) / <alpha-value>)',
+              },
+              'danger': {
+                  'light': 'hsl(var(--danger-light-bg) / <alpha-value>)',
+                  'dark': 'hsl(var(--danger-dark-bg) / <alpha-value>)',
+                  'text-light': 'hsl(var(--danger-text-light) / <alpha-value>)',
+                  'text-dark': 'hsl(var(--danger-text-dark) / <alpha-value>)'
+              }
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+      .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+      .animate-fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+      .animate-scale-in { animation: scaleIn 0.3s ease-out forwards; }
+      
+      :root, .light {
+        --primary: 221 83% 53%;
+        --primary-hover: 221 78% 45%;
+        --primary-light: 220 90% 68%;
+        --background-light: 210 40% 98%;
+        --background-dark: 210 40% 98%; /* Fallback for light mode */
+        --card-light: 0 0% 100%;
+        --card-dark: 0 0% 100%;
+        --header-light: 0 0% 100%;
+        --header-dark: 0 0% 100%;
+        --text-light: 222 47% 11%;
+        --text-dark: 222 47% 11%;
+        --text-muted-light: 215 16% 47%;
+        --text-muted-dark: 215 16% 47%;
+        --border-light: 220 13% 91%;
+        --border-dark: 220 13% 91%;
+        --badge-light: 220 14% 96%;
+        --badge-dark: 220 14% 96%;
+        --danger-light-bg: 0 86% 94%;
+        --danger-dark-bg: 0 86% 94%;
+        --danger-text-light: 0 72% 42%;
+        --danger-text-dark: 0 72% 42%;
+        --pattern: none;
+      }
+
+      .dark {
+        --primary: 221 83% 53%;
+        --primary-hover: 221 78% 45%;
+        --primary-light: 220 90% 68%;
+        --background-light: 222 84% 4%;
+        --background-dark: 222 84% 4%;
+        --card-light: 216 28% 18%;
+        --card-dark: 216 28% 18%;
+        --header-light: 222 47% 11%;
+        --header-dark: 222 47% 11%;
+        --text-light: 220 13% 91%;
+        --text-dark: 220 13% 91%;
+        --text-muted-light: 217 19% 64%;
+        --text-muted-dark: 217 19% 64%;
+        --border-light: 215 28% 27%;
+        --border-dark: 215 28% 27%;
+        --badge-light: 215 28% 27%;
+        --badge-dark: 215 28% 27%;
+        --danger-light-bg: 0 78% 16%;
+        --danger-dark-bg: 0 78% 16%;
+        --danger-text-light: 0 92% 82%;
+        --danger-text-dark: 0 92% 82%;
+        --pattern: none;
+      }
+      body {
+        background-image: var(--pattern);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
